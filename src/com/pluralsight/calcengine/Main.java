@@ -16,10 +16,9 @@ public class Main {
             equation.execute();
 
             System.out.print("result= ");
-            System.out.println(equation.result);
+            System.out.println(equation.getResult());
 
         }
-        System.out.println(equations[3].opCode);
     }
 
     public static MathEquation create(double leftVal, double rightVal, char opCode){
@@ -27,9 +26,9 @@ public class Main {
 //        another methhod called create
         MathEquation equation= new MathEquation();
 //        create new instance of mathequation
-        equation.leftVal=leftVal;
-        equation.rightVal=rightVal;
-        equation.opCode=opCode;
+        equation.setLeftVal(leftVal);
+        equation.setRightVal(rightVal);
+        equation.setOpCode(opCode);
         return equation;
 
     }
