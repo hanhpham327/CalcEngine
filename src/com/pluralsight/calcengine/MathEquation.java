@@ -15,6 +15,8 @@ public class MathEquation {
     public void setOpCode(char opCode) {this.opCode=opCode;}
     public double getResult(){return result;}
 // creating  a constructor of opCode for Mathequation
+    public MathEquation(){}
+
     public MathEquation(char opCode){
         this.opCode=opCode;
     }
@@ -24,6 +26,19 @@ public class MathEquation {
         this.leftVal=leftVal;
         this.rightVal=rightVal;
     }
+    public void execute(double leftVal, double rightVal){
+        this.leftVal=leftVal;
+        this.rightVal=rightVal;
+        execute();
+    }
+
+    public void execute(int leftVal, int rightVal){
+        this.leftVal=leftVal;
+        this.rightVal=rightVal;
+        execute();
+        result=(int)result;
+    }
+
 //method for the class
     public void execute(){
         switch(opCode){
