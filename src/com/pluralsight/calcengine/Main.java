@@ -20,6 +20,24 @@ public class Main {
             System.out.println(equation.getResult());
 
         }
+
+        System.out.println("overload below ");
+
+        double testLeftVal=20;
+        double testrightVal=40;
+        int testLeftValInt=20;
+        int testRightValInt=50;
+
+        MathEquation overloadEquation=new MathEquation('d');
+//        initialize
+        overloadEquation.execute(testLeftValInt,testRightValInt);
+//        call function in object
+        System.out.println(overloadEquation.getResult());
+//        print results
+
+
+
+
     }
 
 }
