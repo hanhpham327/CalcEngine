@@ -3,6 +3,7 @@ package com.pluralsight.calcengine;
 public class Main {
 
     public static void main(String[] args) {
+        /* Below is not used due to class inheritances
 //        this is one method
         MathEquation[] equations=new MathEquation[4];
 //        mathequation[] is the syntax for creating equations (new object);
@@ -30,14 +31,23 @@ public class Main {
 
         MathEquation overloadEquation=new MathEquation('d');
 //        initialize
-        overloadEquation.execute(testLeftValInt,testRightValInt);
+        overloadEquation.execute(testLeftVal,testrightVal);
 //        call function in object
         System.out.println(overloadEquation.getResult());
 //        print results
+*/
+        CalculateBase[] calculators= {
+                new Subtracter(100.0d, 50.0d),
+                new Adder(10.0d, 5.0d),
+                new Multiplier(10.0d, 5.0d),
+                new Divider(10.0d, 5.0d),
 
+        };
+        for (CalculateBase calculator:calculators){
+            calculator.calculate();
+            System.out.println(calculator.getResult());
+        }
 
-
-
-    }
+        }
 
 }
